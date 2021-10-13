@@ -1,7 +1,7 @@
 const numeroDadi = parseInt(prompt("Inserire il numero di dadi con cui si vuole giocare:"));
 
 if (isNaN(numeroDadi)) {
-    alert("Numero dadi non valido, riprovarte.");
+    alert("Numero dadi non valido, riprovare.");
 
 } else {
     console.log(`Numero dadi: ${numeroDadi}`);
