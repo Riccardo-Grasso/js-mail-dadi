@@ -1,5 +1,6 @@
 const numeroDadi = parseInt(prompt("Inserire il numero di dadi con cui si vuole giocare:"));
 
+
 if (isNaN(numeroDadi)) {
     alert("Numero dadi non valido, riprovare.");
 
@@ -40,6 +41,7 @@ if (isNaN(numeroDadi)) {
 
     console.log("Punteggio Computer: " + punteggioComputer);
     alert(`Risultato lancio Computer: ${lancioComputer}. Punteggio Totale: ${punteggioComputer}`);
+
 
 
     //Controllo risultati
