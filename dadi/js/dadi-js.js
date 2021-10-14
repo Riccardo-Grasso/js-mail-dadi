@@ -10,18 +10,23 @@ if (isNaN(numeroDadi)) {
     const lancioPlayer = [];
     const lancioComputer = [];
 
+    let punteggioPlayer = 0;
+    let punteggioComputer = 0;
+
     // Risultati PLAYER
     for (i = 0; i < numeroDadi; i++) {
         lancioPlayer.push(Math.floor(Math.random() * 6) + 1);
     }
     console.log(lancioPlayer);
 
-    const reducer = (previousValue, currentValue) => previousValue + currentValue;
-
-    const punteggioPlayer = lancioPlayer.reduce(reducer);
+    for (x = 0; x < numeroDadi; x++) {
+        punteggioPlayer += lancioPlayer[x];
+    }
 
     console.log("Punteggio Player: " + punteggioPlayer);
     alert(`Risultato lancio Player: ${lancioPlayer}. Punteggio Totale: ${punteggioPlayer}`);
+
+
 
     // Risultati COMPUTER
     for (i = 0; i < numeroDadi; i++) {
@@ -29,9 +34,13 @@ if (isNaN(numeroDadi)) {
     }
     console.log(lancioComputer);
 
-    const punteggioComputer = lancioComputer.reduce(reducer);
+    for (x = 0; x < numeroDadi; x++) {
+        punteggioComputer += lancioComputer[x];
+    }
+
     console.log("Punteggio Computer: " + punteggioComputer);
     alert(`Risultato lancio Computer: ${lancioComputer}. Punteggio Totale: ${punteggioComputer}`);
+
 
     //Controllo risultati
     if (punteggioPlayer > punteggioComputer) {
